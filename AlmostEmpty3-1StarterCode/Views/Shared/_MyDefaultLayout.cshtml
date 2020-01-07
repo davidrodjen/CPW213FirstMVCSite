@@ -9,22 +9,33 @@
     @*<title>@ViewBag.Title</title>*@
     <title>@ViewData["Title"]</title>
 
-	<link href="~/css/site.css" rel="stylesheet" />
+	@*<link href="~/css/site.css" rel="stylesheet" />*@
+	<link href="~/lib/bootstrap-4.4.1-dist/css/bootstrap-Lux.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>My First MVC Website</h1>
-    <nav>
-        <a asp-controller="Home" asp-action="Index">Home Page</a> <br />
-        <a asp-controller="Home" asp-action="About">About Page</a> <br />
-        <a asp-controller="Home" asp-action="SampleWork">Sample Work Page</a>
-    </nav>
+    <div class="text-center">
+        <br />
 
-    <main>
-        @RenderBody()
-    </main>
+        <h1>My First MVC Website</h1>
 
-    <footer>
-        <p>&copy;@DateTime.Today.Year David's Website</p>
-    </footer>
+		<br />
+
+        <nav>
+            <a asp-controller="Home" asp-action="Index">Home Page</a> <br />
+            <a asp-controller="Home" asp-action="About">About Page</a> <br />
+            <a asp-controller="Home" asp-action="SampleWork">Sample Work Page</a>
+        </nav>
+
+		<br />
+
+        <main>
+            @RenderBody()
+        </main>
+
+		<br />
+        <footer>
+            <p>&copy;@DateTime.Today.Year David's Website</p>
+        </footer>
+    </div>
 </body>
 </html>

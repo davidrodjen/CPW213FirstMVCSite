@@ -19,5 +19,11 @@ namespace AlmostEmpty3_1StarterCode.Controllers
             //The title for this one is set in the file itself
             return View(); //View("could return a path");
         }
+
+        public IActionResult SampleWork()
+        {
+            ViewData["Title"] = "Sample Work";
+            return View();
+        }
     }
 }
